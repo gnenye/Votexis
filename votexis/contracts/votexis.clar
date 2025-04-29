@@ -697,5 +697,5 @@
 ;; Get proposal action
 (define-read-only (get-proposal-task (proposal-id uint) (task-id uint))
   (ok (unwrap! (map-get? proposal-tasks { proposal-id: proposal-id, task-id: task-id })
-              (err u"Action not fond")))
+              (err u"Action not found")))
 )
